@@ -1,0 +1,1712 @@
+{
+  "created_at": "2026-09-28T15:28:39.696582+00:00",
+  "python": "3.14.6 (main, Jul 18 2026, 17:05:49) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "processor": "arm64",
+  "versions": {
+    "relindex": "0.1.0",
+    "duckdb": "1.5.6"
+  },
+  "source_sha256": {
+    "src/relindex/relation.py": "51dcbdce93c7b61595d928a4251a990b6b84cfe66326c0ef8324ad7e533d6a26",
+    "benchmarks/relations.py": "402b599d14885c49053a77552c2a38ab5cc996f8b945642591de3b51f370fefb",
+    "uv.lock": "1f311f6dd48267effdaba5206861ca48463d5aaf037d5bfc158baa332ecef741"
+  },
+  "repetitions": 3,
+  "samples": [
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.00044741699821315706,
+      "group_seconds": 0.00026125001022592187,
+      "total_seconds": 0.0007086670084390789,
+      "peak_process_bytes": 28721152,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.0056018339964793995,
+      "group_seconds": 0.0019853330013575032,
+      "total_seconds": 0.007587166997836903,
+      "peak_process_bytes": 29147136,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.4385489999986021,
+      "group_seconds": 0.00041579100070521235,
+      "total_seconds": 0.4389647909993073,
+      "peak_process_bytes": 61505536,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.005474541001603939,
+      "group_seconds": 0.002057541991234757,
+      "total_seconds": 0.007532082992838696,
+      "peak_process_bytes": 29229056,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.4203607079980429,
+      "group_seconds": 0.00043775000085588545,
+      "total_seconds": 0.4207984579988988,
+      "peak_process_bytes": 61308928,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.00047724999603815377,
+      "group_seconds": 0.00027395800861995667,
+      "total_seconds": 0.0007512080046581104,
+      "peak_process_bytes": 28999680,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.3966143750003539,
+      "group_seconds": 0.00036954099778085947,
+      "total_seconds": 0.39698391599813476,
+      "peak_process_bytes": 61407232,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.0004391249967738986,
+      "group_seconds": 0.00025591700978111476,
+      "total_seconds": 0.0006950420065550134,
+      "peak_process_bytes": 28803072,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.005451624994748272,
+      "group_seconds": 0.00209333399834577,
+      "total_seconds": 0.007544958993094042,
+      "peak_process_bytes": 29114368,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.0014196249976521358,
+      "group_seconds": 0.0005742920038755983,
+      "total_seconds": 0.001993917001527734,
+      "peak_process_bytes": 28786688,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.01530458299384918,
+      "group_seconds": 0.00661529200442601,
+      "total_seconds": 0.02191987499827519,
+      "peak_process_bytes": 30474240,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.4021813330036821,
+      "group_seconds": 0.0005783340020570904,
+      "total_seconds": 0.4027596670057392,
+      "peak_process_bytes": 61636608,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.015471582999452949,
+      "group_seconds": 0.007298999989870936,
+      "total_seconds": 0.022770582989323884,
+      "peak_process_bytes": 30343168,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.40539212500152644,
+      "group_seconds": 0.000683209000271745,
+      "total_seconds": 0.4060753340017982,
+      "peak_process_bytes": 61603840,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.0014459579979302362,
+      "group_seconds": 0.0005944590084254742,
+      "total_seconds": 0.0020404170063557103,
+      "peak_process_bytes": 28934144,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.3963145000016084,
+      "group_seconds": 0.0005728329997509718,
+      "total_seconds": 0.39688733300135937,
+      "peak_process_bytes": 61538304,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.0014736669982085004,
+      "group_seconds": 0.0005907080048928037,
+      "total_seconds": 0.002064375003101304,
+      "peak_process_bytes": 29114368,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.015477959008421749,
+      "group_seconds": 0.007570874993689358,
+      "total_seconds": 0.023048834002111107,
+      "peak_process_bytes": 30310400,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.005472624994581565,
+      "group_seconds": 0.0030563329928554595,
+      "total_seconds": 0.008528957987437025,
+      "peak_process_bytes": 36585472,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.06151749999844469,
+      "group_seconds": 0.026311416004318744,
+      "total_seconds": 0.08782891600276344,
+      "peak_process_bytes": 39157760,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 3.9533586250036024,
+      "group_seconds": 0.003000291995704174,
+      "total_seconds": 3.9563589169993065,
+      "peak_process_bytes": 70139904,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.061705999993137084,
+      "group_seconds": 0.027307333002681844,
+      "total_seconds": 0.08901333299581893,
+      "peak_process_bytes": 40353792,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 3.942617707987665,
+      "group_seconds": 0.002945416999864392,
+      "total_seconds": 3.9455631249875296,
+      "peak_process_bytes": 68632576,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.005134999999427237,
+      "group_seconds": 0.0029999580001458526,
+      "total_seconds": 0.00813495799957309,
+      "peak_process_bytes": 36519936,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 3.9024291670066305,
+      "group_seconds": 0.0030736670014448464,
+      "total_seconds": 3.9055028340080753,
+      "peak_process_bytes": 69353472,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.005239499994786456,
+      "group_seconds": 0.003107541997451335,
+      "total_seconds": 0.008347041992237791,
+      "peak_process_bytes": 36225024,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.059929499999270774,
+      "group_seconds": 0.026849832996958867,
+      "total_seconds": 0.08677933299622964,
+      "peak_process_bytes": 38420480,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.018739209001068957,
+      "group_seconds": 0.005577124989940785,
+      "total_seconds": 0.024316333991009742,
+      "peak_process_bytes": 39698432,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.1810813330084784,
+      "group_seconds": 0.0922039579891134,
+      "total_seconds": 0.2732852909975918,
+      "peak_process_bytes": 53329920,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 4.015525750000961,
+      "group_seconds": 0.005540583006222732,
+      "total_seconds": 4.021066333007184,
+      "peak_process_bytes": 74219520,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.1827647500031162,
+      "group_seconds": 0.09154233399021905,
+      "total_seconds": 0.27430708399333525,
+      "peak_process_bytes": 53329920,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 4.113320042000851,
+      "group_seconds": 0.005769708004663698,
+      "total_seconds": 4.119089750005514,
+      "peak_process_bytes": 74530816,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.019323458007420413,
+      "group_seconds": 0.005416208005044609,
+      "total_seconds": 0.024739666012465023,
+      "peak_process_bytes": 38797312,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 3.898795417000656,
+      "group_seconds": 0.005883167003048584,
+      "total_seconds": 3.9046785840037046,
+      "peak_process_bytes": 74743808,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.019116582989227027,
+      "group_seconds": 0.005489875009516254,
+      "total_seconds": 0.02460645799874328,
+      "peak_process_bytes": 39616512,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.18006391599192284,
+      "group_seconds": 0.09682820900343359,
+      "total_seconds": 0.2768921249953564,
+      "peak_process_bytes": 55459840,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.0842151249962626,
+      "group_seconds": 0.04166375000204425,
+      "total_seconds": 0.12587887499830686,
+      "peak_process_bytes": 126451712,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.7792220419942169,
+      "group_seconds": 0.5492621250014054,
+      "total_seconds": 1.3284841669956222,
+      "peak_process_bytes": 130154496,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 38.41626691700367,
+      "group_seconds": 0.04475474999344442,
+      "total_seconds": 38.46102166699711,
+      "peak_process_bytes": 151420928,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.7722307500080206,
+      "group_seconds": 0.41438708298665006,
+      "total_seconds": 1.1866178329946706,
+      "peak_process_bytes": 132153344,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 38.83169220799755,
+      "group_seconds": 0.046039957989705727,
+      "total_seconds": 38.877732165987254,
+      "peak_process_bytes": 154042368,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.0838191250077216,
+      "group_seconds": 0.04426745799719356,
+      "total_seconds": 0.12808658300491516,
+      "peak_process_bytes": 127041536,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 39.07026883299113,
+      "group_seconds": 0.048168459004955366,
+      "total_seconds": 39.11843729199609,
+      "peak_process_bytes": 150765568,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.08200999999826308,
+      "group_seconds": 0.04095495800720528,
+      "total_seconds": 0.12296495800546836,
+      "peak_process_bytes": 126353408,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.7887989160080906,
+      "group_seconds": 0.4549209999968298,
+      "total_seconds": 1.2437199160049204,
+      "peak_process_bytes": 131448832,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.3363648749946151,
+      "group_seconds": 0.08814254100434482,
+      "total_seconds": 0.4245074159989599,
+      "peak_process_bytes": 155467776,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.459460415993817,
+      "group_seconds": 1.431505417000153,
+      "total_seconds": 3.8909658329939703,
+      "peak_process_bytes": 270532608,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 0
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 39.66003908299899,
+      "group_seconds": 0.0937618749885587,
+      "total_seconds": 39.75380095798755,
+      "peak_process_bytes": 209862656,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.4752224999974715,
+      "group_seconds": 1.4160615419968963,
+      "total_seconds": 3.8912840419943677,
+      "peak_process_bytes": 269369344,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 39.21935237500293,
+      "group_seconds": 0.08984870799758937,
+      "total_seconds": 39.30920108300052,
+      "peak_process_bytes": 214335488,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.32615183299640194,
+      "group_seconds": 0.086907083998085,
+      "total_seconds": 0.41305891699448694,
+      "peak_process_bytes": 153698304,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 1
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 39.382259874997544,
+      "group_seconds": 0.0984477500023786,
+      "total_seconds": 39.48070762499992,
+      "peak_process_bytes": 218267648,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.3382449170021573,
+      "group_seconds": 0.09324033299344592,
+      "total_seconds": 0.4314852499956032,
+      "peak_process_bytes": 155238400,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.440022291993955,
+      "group_seconds": 1.461062333008158,
+      "total_seconds": 3.901084625002113,
+      "peak_process_bytes": 269991936,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 2
+    }
+  ],
+  "summary": [
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "output_rows": 909,
+      "median_seconds": 0.0007086670084390789,
+      "min_seconds": 0.0006950420065550134,
+      "max_seconds": 0.0007512080046581104,
+      "median_peak_process_bytes": 28803072
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "output_rows": 909,
+      "median_seconds": 0.007544958993094042,
+      "min_seconds": 0.007532082992838696,
+      "max_seconds": 0.007587166997836903,
+      "median_peak_process_bytes": 29147136
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "sparse",
+      "output_rows": 909,
+      "median_seconds": 0.4207984579988988,
+      "min_seconds": 0.39698391599813476,
+      "max_seconds": 0.4389647909993073,
+      "median_peak_process_bytes": 61407232
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "output_rows": 3909,
+      "median_seconds": 0.0020404170063557103,
+      "min_seconds": 0.001993917001527734,
+      "max_seconds": 0.002064375003101304,
+      "median_peak_process_bytes": 28934144
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "output_rows": 3909,
+      "median_seconds": 0.022770582989323884,
+      "min_seconds": 0.02191987499827519,
+      "max_seconds": 0.023048834002111107,
+      "median_peak_process_bytes": 30343168
+    },
+    {
+      "method": "duckdb",
+      "size": 1000,
+      "case": "fanout",
+      "output_rows": 3909,
+      "median_seconds": 0.4027596670057392,
+      "min_seconds": 0.39688733300135937,
+      "max_seconds": 0.4060753340017982,
+      "median_peak_process_bytes": 61603840
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "output_rows": 9090,
+      "median_seconds": 0.008347041992237791,
+      "min_seconds": 0.00813495799957309,
+      "max_seconds": 0.008528957987437025,
+      "median_peak_process_bytes": 36519936
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "output_rows": 9090,
+      "median_seconds": 0.08782891600276344,
+      "min_seconds": 0.08677933299622964,
+      "max_seconds": 0.08901333299581893,
+      "median_peak_process_bytes": 39157760
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "sparse",
+      "output_rows": 9090,
+      "median_seconds": 3.9455631249875296,
+      "min_seconds": 3.9055028340080753,
+      "max_seconds": 3.9563589169993065,
+      "median_peak_process_bytes": 69353472
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "output_rows": 39090,
+      "median_seconds": 0.02460645799874328,
+      "min_seconds": 0.024316333991009742,
+      "max_seconds": 0.024739666012465023,
+      "median_peak_process_bytes": 39616512
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "output_rows": 39090,
+      "median_seconds": 0.27430708399333525,
+      "min_seconds": 0.2732852909975918,
+      "max_seconds": 0.2768921249953564,
+      "median_peak_process_bytes": 53329920
+    },
+    {
+      "method": "duckdb",
+      "size": 10000,
+      "case": "fanout",
+      "output_rows": 39090,
+      "median_seconds": 4.021066333007184,
+      "min_seconds": 3.9046785840037046,
+      "max_seconds": 4.119089750005514,
+      "median_peak_process_bytes": 74530816
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "output_rows": 90909,
+      "median_seconds": 0.12587887499830686,
+      "min_seconds": 0.12296495800546836,
+      "max_seconds": 0.12808658300491516,
+      "median_peak_process_bytes": 126451712
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "output_rows": 90909,
+      "median_seconds": 1.2437199160049204,
+      "min_seconds": 1.1866178329946706,
+      "max_seconds": 1.3284841669956222,
+      "median_peak_process_bytes": 131448832
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "sparse",
+      "output_rows": 90909,
+      "median_seconds": 38.877732165987254,
+      "min_seconds": 38.46102166699711,
+      "max_seconds": 39.11843729199609,
+      "median_peak_process_bytes": 151420928
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "output_rows": 390909,
+      "median_seconds": 0.4245074159989599,
+      "min_seconds": 0.41305891699448694,
+      "max_seconds": 0.4314852499956032,
+      "median_peak_process_bytes": 155238400
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "output_rows": 390909,
+      "median_seconds": 3.8912840419943677,
+      "min_seconds": 3.8909658329939703,
+      "max_seconds": 3.901084625002113,
+      "median_peak_process_bytes": 269991936
+    },
+    {
+      "method": "duckdb",
+      "size": 100000,
+      "case": "fanout",
+      "output_rows": 390909,
+      "median_seconds": 39.48070762499992,
+      "min_seconds": 39.30920108300052,
+      "max_seconds": 39.75380095798755,
+      "median_peak_process_bytes": 214335488
+    }
+  ]
+}

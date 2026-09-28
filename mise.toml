@@ -1,0 +1,56 @@
+[tools]
+python = "3.14.6"
+uv = "0.11.16"
+
+[env]
+UV_PYTHON_PREFERENCE = "only-system"
+
+[tasks.setup]
+description = "Install locked development, example, and benchmark dependencies"
+run = "uv sync --locked --all-groups"
+
+[tasks.check]
+description = "Run formatting, lint, type, and test checks"
+run = [
+    "uv run --locked ruff format --check .",
+    "uv run --locked ruff check .",
+    "uv run --locked mypy",
+    "uv run --locked --group examples pytest",
+    "uv run --locked python scripts/check_docs.py",
+]
+
+[tasks.test]
+description = "Run all tests, including solver integration"
+run = "uv run --locked --group examples pytest"
+
+[tasks."test:core"]
+description = "Run relation tests without modeling libraries"
+run = "uv run --locked pytest tests/test_relation.py tests/test_algebra.py"
+
+[tasks.format]
+description = "Format Python source"
+run = "uv run --locked ruff format ."
+
+[tasks.examples]
+description = "Solve the assignment and network examples"
+run = [
+    "uv run --locked --group examples python examples/assignment.py",
+    "uv run --locked --group examples python examples/network.py",
+]
+
+[tasks.benchmark]
+description = "Compare relation preparation with indexed Python and DuckDB"
+run = "uv run --locked --group benchmark python benchmarks/relations.py"
+
+[tasks."benchmark:models"]
+description = "Measure model construction and solving separately"
+run = "uv run --locked --group examples python -m benchmarks.models"
+
+[tasks.build]
+description = "Build the wheel and source distribution"
+run = "uv build"
+
+[tasks."verify:wheel"]
+description = "Verify the installed wheel outside the source tree"
+depends = ["build"]
+run = "uv run --locked python scripts/verify_wheel.py"

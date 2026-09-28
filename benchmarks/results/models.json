@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-09-28T15:18:39.276122+00:00",
+  "python": "3.14.6 (main, Jul 18 2026, 17:05:49) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "relindex": "0.1.0",
+    "pulp": "4.0.0",
+    "pyomo": "6.10.1",
+    "highspy": "1.15.1"
+  },
+  "solver_threads": 1,
+  "repetitions": 3,
+  "source_sha256": {
+    "src/relindex/relation.py": "51dcbdce93c7b61595d928a4251a990b6b84cfe66326c0ef8324ad7e533d6a26",
+    "examples/assignment.py": "5b9f1f2b41738fbed20d4ad35505871635ea0907a166ff5014b769bbb222d2ee",
+    "examples/network.py": "8bfaaf3145c22a1ee9e0f39586b8355f9746b70759cff2e819e58a2ee058d9c0",
+    "benchmarks/models.py": "35d8e3d6c78c9e6157cf275faa80910c972395507024acdb4243eab3a3a9892e",
+    "uv.lock": "1f311f6dd48267effdaba5206861ca48463d5aaf037d5bfc158baa332ecef741"
+  },
+  "samples": [
+    {
+      "case": "assignment",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.0003407500043977052,
+      "solve_including_transfer_seconds": 0.006916915997862816,
+      "peak_process_bytes": 83787776,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 0
+    },
+    {
+      "case": "assignment",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.00030008300382178277,
+      "solve_including_transfer_seconds": 0.0011488750024000183,
+      "peak_process_bytes": 84213760,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 1
+    },
+    {
+      "case": "assignment",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.0002822499955072999,
+      "solve_including_transfer_seconds": 0.0010482919897185639,
+      "peak_process_bytes": 83378176,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 2
+    },
+    {
+      "case": "assignment",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0007569999870611355,
+      "solve_including_transfer_seconds": 0.004630790994269773,
+      "peak_process_bytes": 84082688,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 0
+    },
+    {
+      "case": "assignment",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0006282499962253496,
+      "solve_including_transfer_seconds": 0.003771999996388331,
+      "peak_process_bytes": 83689472,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 1
+    },
+    {
+      "case": "assignment",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0007183749985415488,
+      "solve_including_transfer_seconds": 0.0037129580014152452,
+      "peak_process_bytes": 84000768,
+      "variables": 5,
+      "constraints": 6,
+      "constraint_nonzeros": 10,
+      "objective_nonzeros": 5,
+      "objective": 3.0,
+      "repetition": 2
+    },
+    {
+      "case": "network",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.00022587500279769301,
+      "solve_including_transfer_seconds": 0.0018930000078398734,
+      "peak_process_bytes": 83525632,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 0
+    },
+    {
+      "case": "network",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.00021525000920519233,
+      "solve_including_transfer_seconds": 0.0007289579953067005,
+      "peak_process_bytes": 83460096,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 1
+    },
+    {
+      "case": "network",
+      "modeler": "pulp",
+      "build_including_indices_seconds": 0.00024383299751207232,
+      "solve_including_transfer_seconds": 0.0008205420017475262,
+      "peak_process_bytes": 83525632,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 2
+    },
+    {
+      "case": "network",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0006554169958690181,
+      "solve_including_transfer_seconds": 0.003186707996064797,
+      "peak_process_bytes": 83984384,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 0
+    },
+    {
+      "case": "network",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0006492079992312938,
+      "solve_including_transfer_seconds": 0.002959416000521742,
+      "peak_process_bytes": 83656704,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 1
+    },
+    {
+      "case": "network",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": 0.0006753329944331199,
+      "solve_including_transfer_seconds": 0.0033235839946428314,
+      "peak_process_bytes": 83361792,
+      "variables": 3,
+      "constraints": 4,
+      "constraint_nonzeros": 6,
+      "objective_nonzeros": 3,
+      "objective": 9.0,
+      "repetition": 2
+    }
+  ],
+  "summary": [
+    {
+      "case": "assignment",
+      "modeler": "pulp",
+      "build_including_indices_seconds": {
+        "median": 0.00030008300382178277,
+        "min": 0.0002822499955072999,
+        "max": 0.0003407500043977052
+      },
+      "solve_including_transfer_seconds": {
+        "median": 0.0011488750024000183,
+        "min": 0.0010482919897185639,
+        "max": 0.006916915997862816
+      },
+      "peak_process_bytes": {
+        "median": 83787776,
+        "min": 83378176,
+        "max": 84213760
+      }
+    },
+    {
+      "case": "assignment",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": {
+        "median": 0.0007183749985415488,
+        "min": 0.0006282499962253496,
+        "max": 0.0007569999870611355
+      },
+      "solve_including_transfer_seconds": {
+        "median": 0.003771999996388331,
+        "min": 0.0037129580014152452,
+        "max": 0.004630790994269773
+      },
+      "peak_process_bytes": {
+        "median": 84000768,
+        "min": 83689472,
+        "max": 84082688
+      }
+    },
+    {
+      "case": "network",
+      "modeler": "pulp",
+      "build_including_indices_seconds": {
+        "median": 0.00022587500279769301,
+        "min": 0.00021525000920519233,
+        "max": 0.00024383299751207232
+      },
+      "solve_including_transfer_seconds": {
+        "median": 0.0008205420017475262,
+        "min": 0.0007289579953067005,
+        "max": 0.0018930000078398734
+      },
+      "peak_process_bytes": {
+        "median": 83525632,
+        "min": 83460096,
+        "max": 83525632
+      }
+    },
+    {
+      "case": "network",
+      "modeler": "pyomo",
+      "build_including_indices_seconds": {
+        "median": 0.0006554169958690181,
+        "min": 0.0006492079992312938,
+        "max": 0.0006753329944331199
+      },
+      "solve_including_transfer_seconds": {
+        "median": 0.003186707996064797,
+        "min": 0.002959416000521742,
+        "max": 0.0033235839946428314
+      },
+      "peak_process_bytes": {
+        "median": 83656704,
+        "min": 83361792,
+        "max": 83984384
+      }
+    }
+  ]
+}
