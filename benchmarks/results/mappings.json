@@ -1,0 +1,997 @@
+{
+  "created_at": "2026-09-28T16:20:03.271806+00:00",
+  "python": "3.14.6 (main, Jul 18 2026, 17:05:49) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "relindex": "0.1.0",
+    "pulp": "4.0.0"
+  },
+  "methods": [
+    "python-dict",
+    "relindex-rows",
+    "relindex-mapping"
+  ],
+  "repetitions": 3,
+  "source_sha256": {
+    "benchmarks/mappings.py": "a7995cb3488c9b1d5bcd0f60123545af7cb6f126e437c681bd9bff87318599d6",
+    "benchmarks/relations.py": "c538ae8e924963b93bf58d1c567c82dc432cb21ec8cdb477a3e7aca7f4bc107b",
+    "uv.lock": "1f311f6dd48267effdaba5206861ca48463d5aaf037d5bfc158baa332ecef741",
+    "src/relindex/relation.py": "31870a04774e8fa473d4a5e15e9f985fe5c5f03e105c169fba857b8ef163fb58"
+  },
+  "samples": [
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0001264160091523081,
+      "filter_seconds": 0.0003622499934863299,
+      "export_seconds": 0.000221334004891105,
+      "prepare_seconds": 0.000710000007529743,
+      "model_build_seconds": 0.012502375000622123,
+      "total_seconds": 0.013212375008151866,
+      "prepare_peak_process_bytes": 54804480,
+      "peak_process_bytes": 56573952,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.001320790994213894,
+      "filter_seconds": 0.00040387500484939665,
+      "export_seconds": 0.0027847500023199245,
+      "prepare_seconds": 0.004509416001383215,
+      "model_build_seconds": 0.013268750000861473,
+      "total_seconds": 0.01777816600224469,
+      "prepare_peak_process_bytes": 55132160,
+      "peak_process_bytes": 56852480,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0010142079991055652,
+      "filter_seconds": 0.00041287500062026083,
+      "export_seconds": 0.001124667003750801,
+      "prepare_seconds": 0.002551750003476627,
+      "model_build_seconds": 0.012388374991132878,
+      "total_seconds": 0.014940124994609505,
+      "prepare_peak_process_bytes": 55263232,
+      "peak_process_bytes": 57016320,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0013879580073989928,
+      "filter_seconds": 0.00040350000199396163,
+      "export_seconds": 0.00249687499308493,
+      "prepare_seconds": 0.004288333002477884,
+      "model_build_seconds": 0.013092916997266002,
+      "total_seconds": 0.017381249999743886,
+      "prepare_peak_process_bytes": 55050240,
+      "peak_process_bytes": 56803328,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0010902499925578013,
+      "filter_seconds": 0.00043966699740849435,
+      "export_seconds": 0.0011943749996135011,
+      "prepare_seconds": 0.002724291989579797,
+      "model_build_seconds": 0.013075166993075982,
+      "total_seconds": 0.01579945898265578,
+      "prepare_peak_process_bytes": 55001088,
+      "peak_process_bytes": 56508416,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.00012454099487513304,
+      "filter_seconds": 0.00035145900619681925,
+      "export_seconds": 0.00020904099801555276,
+      "prepare_seconds": 0.000685040999087505,
+      "model_build_seconds": 0.013085541999316774,
+      "total_seconds": 0.01377058299840428,
+      "prepare_peak_process_bytes": 55066624,
+      "peak_process_bytes": 56967168,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0009680000075604767,
+      "filter_seconds": 0.00040574999002274126,
+      "export_seconds": 0.0011011250026058406,
+      "prepare_seconds": 0.0024748750001890585,
+      "model_build_seconds": 0.012671415999648161,
+      "total_seconds": 0.01514629099983722,
+      "prepare_peak_process_bytes": 55050240,
+      "peak_process_bytes": 56655872,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.00012149999383836985,
+      "filter_seconds": 0.0003426670009503141,
+      "export_seconds": 0.00020954199135303497,
+      "prepare_seconds": 0.0006737089861417189,
+      "model_build_seconds": 0.013210417004302144,
+      "total_seconds": 0.013884125990443863,
+      "prepare_peak_process_bytes": 55001088,
+      "peak_process_bytes": 56590336,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0013341659941943362,
+      "filter_seconds": 0.00048466700536664575,
+      "export_seconds": 0.0028556250035762787,
+      "prepare_seconds": 0.004674458003137261,
+      "model_build_seconds": 0.01254716599942185,
+      "total_seconds": 0.01722162400255911,
+      "prepare_peak_process_bytes": 55083008,
+      "peak_process_bytes": 57229312,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.0030024169973330572,
+      "filter_seconds": 0.0038972080074017867,
+      "export_seconds": 0.0030454999941866845,
+      "prepare_seconds": 0.009945124998921528,
+      "model_build_seconds": 0.19093770800100174,
+      "total_seconds": 0.20088283299992327,
+      "prepare_peak_process_bytes": 63815680,
+      "peak_process_bytes": 86327296,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.01507470800424926,
+      "filter_seconds": 0.006343749992083758,
+      "export_seconds": 0.029873749997932464,
+      "prepare_seconds": 0.05129220799426548,
+      "model_build_seconds": 0.1334745830099564,
+      "total_seconds": 0.1847667910042219,
+      "prepare_peak_process_bytes": 68780032,
+      "peak_process_bytes": 87621632,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.010754458999144845,
+      "filter_seconds": 0.005746333001297899,
+      "export_seconds": 0.015235708007821813,
+      "prepare_seconds": 0.031736500008264557,
+      "model_build_seconds": 0.13164983299793676,
+      "total_seconds": 0.1633863330062013,
+      "prepare_peak_process_bytes": 69795840,
+      "peak_process_bytes": 86310912,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.01498854199599009,
+      "filter_seconds": 0.0056094579922501,
+      "export_seconds": 0.03439720900496468,
+      "prepare_seconds": 0.05499520899320487,
+      "model_build_seconds": 0.12877345801098272,
+      "total_seconds": 0.1837686670041876,
+      "prepare_peak_process_bytes": 69337088,
+      "peak_process_bytes": 86999040,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.010861124988878146,
+      "filter_seconds": 0.006529583013616502,
+      "export_seconds": 0.015291582996724173,
+      "prepare_seconds": 0.03268229099921882,
+      "model_build_seconds": 0.12874087500676978,
+      "total_seconds": 0.1614231660059886,
+      "prepare_peak_process_bytes": 69697536,
+      "peak_process_bytes": 87015424,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.003092999992077239,
+      "filter_seconds": 0.0035052500024903566,
+      "export_seconds": 0.002470834006089717,
+      "prepare_seconds": 0.009069084000657313,
+      "model_build_seconds": 0.1287521670019487,
+      "total_seconds": 0.137821251002606,
+      "prepare_peak_process_bytes": 64569344,
+      "peak_process_bytes": 84967424,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.010556958994129673,
+      "filter_seconds": 0.005285457998979837,
+      "export_seconds": 0.01459808299841825,
+      "prepare_seconds": 0.03044049999152776,
+      "model_build_seconds": 0.13105620900751092,
+      "total_seconds": 0.16149670899903867,
+      "prepare_peak_process_bytes": 69599232,
+      "peak_process_bytes": 87867392,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.0026116249937331304,
+      "filter_seconds": 0.0038002920045983046,
+      "export_seconds": 0.0022210000024642795,
+      "prepare_seconds": 0.008632917000795715,
+      "model_build_seconds": 0.12689475000661332,
+      "total_seconds": 0.13552766700740904,
+      "prepare_peak_process_bytes": 64110592,
+      "peak_process_bytes": 84672512,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.014968666990171187,
+      "filter_seconds": 0.00548704199900385,
+      "export_seconds": 0.03162300000258256,
+      "prepare_seconds": 0.052078708991757594,
+      "model_build_seconds": 0.13593991700327024,
+      "total_seconds": 0.18801862599502783,
+      "prepare_peak_process_bytes": 68698112,
+      "peak_process_bytes": 87113728,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.05289983400143683,
+      "filter_seconds": 0.048093290999531746,
+      "export_seconds": 0.025440709010581486,
+      "prepare_seconds": 0.12643383401155006,
+      "model_build_seconds": 1.5698551669920562,
+      "total_seconds": 1.6962890010036062,
+      "prepare_peak_process_bytes": 170524672,
+      "peak_process_bytes": 362577920,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.2016735830111429,
+      "filter_seconds": 0.11953458299103659,
+      "export_seconds": 0.6014661250083009,
+      "prepare_seconds": 0.9226742910104804,
+      "model_build_seconds": 1.5134652080014348,
+      "total_seconds": 2.436139499011915,
+      "prepare_peak_process_bytes": 202588160,
+      "peak_process_bytes": 365346816,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.14329433300008532,
+      "filter_seconds": 0.11991620800108649,
+      "export_seconds": 0.413041499996325,
+      "prepare_seconds": 0.6762520409974968,
+      "model_build_seconds": 1.5290962089929963,
+      "total_seconds": 2.205348249990493,
+      "prepare_peak_process_bytes": 222265344,
+      "peak_process_bytes": 364068864,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.2016484159976244,
+      "filter_seconds": 0.11938699999882374,
+      "export_seconds": 0.5562632499932079,
+      "prepare_seconds": 0.877298665989656,
+      "model_build_seconds": 1.5194217079988448,
+      "total_seconds": 2.396720373988501,
+      "prepare_peak_process_bytes": 202358784,
+      "peak_process_bytes": 363839488,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.1344985000032466,
+      "filter_seconds": 0.11980966699775308,
+      "export_seconds": 0.4007012920046691,
+      "prepare_seconds": 0.6550094590056688,
+      "model_build_seconds": 1.543545874999836,
+      "total_seconds": 2.198555334005505,
+      "prepare_peak_process_bytes": 222478336,
+      "peak_process_bytes": 365363200,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.04990858300880063,
+      "filter_seconds": 0.046459124991088174,
+      "export_seconds": 0.026646500002243556,
+      "prepare_seconds": 0.12301420800213236,
+      "model_build_seconds": 1.5725217919971328,
+      "total_seconds": 1.6955359999992652,
+      "prepare_peak_process_bytes": 170688512,
+      "peak_process_bytes": 363298816,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 1
+    },
+    {
+      "method": "relindex-mapping",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.13935879099881276,
+      "filter_seconds": 0.12198437500046566,
+      "export_seconds": 0.40178458399896044,
+      "prepare_seconds": 0.6631277499982389,
+      "model_build_seconds": 1.5301679170079296,
+      "total_seconds": 2.1932956670061685,
+      "prepare_peak_process_bytes": 221413376,
+      "peak_process_bytes": 363200512,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.049044792001950555,
+      "filter_seconds": 0.043349457992007956,
+      "export_seconds": 0.026083292003022507,
+      "prepare_seconds": 0.11847754199698102,
+      "model_build_seconds": 1.5824423750018468,
+      "total_seconds": 1.7009199169988278,
+      "prepare_peak_process_bytes": 169984000,
+      "peak_process_bytes": 363249664,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.19650499999988824,
+      "filter_seconds": 0.12293670899816789,
+      "export_seconds": 0.5650293329963461,
+      "prepare_seconds": 0.8844710419944022,
+      "model_build_seconds": 1.5303035840042867,
+      "total_seconds": 2.414774625998689,
+      "prepare_peak_process_bytes": 201326592,
+      "peak_process_bytes": 364249088,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 2
+    }
+  ],
+  "summary": [
+    {
+      "size": 1000,
+      "method": "python-dict",
+      "output_rows": 3679,
+      "import_seconds": {
+        "median": 0.00012454099487513304,
+        "min": 0.00012149999383836985,
+        "max": 0.0001264160091523081
+      },
+      "filter_seconds": {
+        "median": 0.00035145900619681925,
+        "min": 0.0003426670009503141,
+        "max": 0.0003622499934863299
+      },
+      "export_seconds": {
+        "median": 0.00020954199135303497,
+        "min": 0.00020904099801555276,
+        "max": 0.000221334004891105
+      },
+      "prepare_seconds": {
+        "median": 0.000685040999087505,
+        "min": 0.0006737089861417189,
+        "max": 0.000710000007529743
+      },
+      "model_build_seconds": {
+        "median": 0.013085541999316774,
+        "min": 0.012502375000622123,
+        "max": 0.013210417004302144
+      },
+      "total_seconds": {
+        "median": 0.01377058299840428,
+        "min": 0.013212375008151866,
+        "max": 0.013884125990443863
+      },
+      "prepare_peak_process_bytes": {
+        "median": 55001088,
+        "min": 54804480,
+        "max": 55066624
+      },
+      "peak_process_bytes": {
+        "median": 56590336,
+        "min": 56573952,
+        "max": 56967168
+      }
+    },
+    {
+      "size": 1000,
+      "method": "relindex-rows",
+      "output_rows": 3679,
+      "import_seconds": {
+        "median": 0.0013341659941943362,
+        "min": 0.001320790994213894,
+        "max": 0.0013879580073989928
+      },
+      "filter_seconds": {
+        "median": 0.00040387500484939665,
+        "min": 0.00040350000199396163,
+        "max": 0.00048466700536664575
+      },
+      "export_seconds": {
+        "median": 0.0027847500023199245,
+        "min": 0.00249687499308493,
+        "max": 0.0028556250035762787
+      },
+      "prepare_seconds": {
+        "median": 0.004509416001383215,
+        "min": 0.004288333002477884,
+        "max": 0.004674458003137261
+      },
+      "model_build_seconds": {
+        "median": 0.013092916997266002,
+        "min": 0.01254716599942185,
+        "max": 0.013268750000861473
+      },
+      "total_seconds": {
+        "median": 0.017381249999743886,
+        "min": 0.01722162400255911,
+        "max": 0.01777816600224469
+      },
+      "prepare_peak_process_bytes": {
+        "median": 55083008,
+        "min": 55050240,
+        "max": 55132160
+      },
+      "peak_process_bytes": {
+        "median": 56852480,
+        "min": 56803328,
+        "max": 57229312
+      }
+    },
+    {
+      "size": 1000,
+      "method": "relindex-mapping",
+      "output_rows": 3679,
+      "import_seconds": {
+        "median": 0.0010142079991055652,
+        "min": 0.0009680000075604767,
+        "max": 0.0010902499925578013
+      },
+      "filter_seconds": {
+        "median": 0.00041287500062026083,
+        "min": 0.00040574999002274126,
+        "max": 0.00043966699740849435
+      },
+      "export_seconds": {
+        "median": 0.001124667003750801,
+        "min": 0.0011011250026058406,
+        "max": 0.0011943749996135011
+      },
+      "prepare_seconds": {
+        "median": 0.002551750003476627,
+        "min": 0.0024748750001890585,
+        "max": 0.002724291989579797
+      },
+      "model_build_seconds": {
+        "median": 0.012671415999648161,
+        "min": 0.012388374991132878,
+        "max": 0.013075166993075982
+      },
+      "total_seconds": {
+        "median": 0.01514629099983722,
+        "min": 0.014940124994609505,
+        "max": 0.01579945898265578
+      },
+      "prepare_peak_process_bytes": {
+        "median": 55050240,
+        "min": 55001088,
+        "max": 55263232
+      },
+      "peak_process_bytes": {
+        "median": 56655872,
+        "min": 56508416,
+        "max": 57016320
+      }
+    },
+    {
+      "size": 10000,
+      "method": "python-dict",
+      "output_rows": 36788,
+      "import_seconds": {
+        "median": 0.0030024169973330572,
+        "min": 0.0026116249937331304,
+        "max": 0.003092999992077239
+      },
+      "filter_seconds": {
+        "median": 0.0038002920045983046,
+        "min": 0.0035052500024903566,
+        "max": 0.0038972080074017867
+      },
+      "export_seconds": {
+        "median": 0.002470834006089717,
+        "min": 0.0022210000024642795,
+        "max": 0.0030454999941866845
+      },
+      "prepare_seconds": {
+        "median": 0.009069084000657313,
+        "min": 0.008632917000795715,
+        "max": 0.009945124998921528
+      },
+      "model_build_seconds": {
+        "median": 0.1287521670019487,
+        "min": 0.12689475000661332,
+        "max": 0.19093770800100174
+      },
+      "total_seconds": {
+        "median": 0.137821251002606,
+        "min": 0.13552766700740904,
+        "max": 0.20088283299992327
+      },
+      "prepare_peak_process_bytes": {
+        "median": 64110592,
+        "min": 63815680,
+        "max": 64569344
+      },
+      "peak_process_bytes": {
+        "median": 84967424,
+        "min": 84672512,
+        "max": 86327296
+      }
+    },
+    {
+      "size": 10000,
+      "method": "relindex-rows",
+      "output_rows": 36788,
+      "import_seconds": {
+        "median": 0.01498854199599009,
+        "min": 0.014968666990171187,
+        "max": 0.01507470800424926
+      },
+      "filter_seconds": {
+        "median": 0.0056094579922501,
+        "min": 0.00548704199900385,
+        "max": 0.006343749992083758
+      },
+      "export_seconds": {
+        "median": 0.03162300000258256,
+        "min": 0.029873749997932464,
+        "max": 0.03439720900496468
+      },
+      "prepare_seconds": {
+        "median": 0.052078708991757594,
+        "min": 0.05129220799426548,
+        "max": 0.05499520899320487
+      },
+      "model_build_seconds": {
+        "median": 0.1334745830099564,
+        "min": 0.12877345801098272,
+        "max": 0.13593991700327024
+      },
+      "total_seconds": {
+        "median": 0.1847667910042219,
+        "min": 0.1837686670041876,
+        "max": 0.18801862599502783
+      },
+      "prepare_peak_process_bytes": {
+        "median": 68780032,
+        "min": 68698112,
+        "max": 69337088
+      },
+      "peak_process_bytes": {
+        "median": 87113728,
+        "min": 86999040,
+        "max": 87621632
+      }
+    },
+    {
+      "size": 10000,
+      "method": "relindex-mapping",
+      "output_rows": 36788,
+      "import_seconds": {
+        "median": 0.010754458999144845,
+        "min": 0.010556958994129673,
+        "max": 0.010861124988878146
+      },
+      "filter_seconds": {
+        "median": 0.005746333001297899,
+        "min": 0.005285457998979837,
+        "max": 0.006529583013616502
+      },
+      "export_seconds": {
+        "median": 0.015235708007821813,
+        "min": 0.01459808299841825,
+        "max": 0.015291582996724173
+      },
+      "prepare_seconds": {
+        "median": 0.031736500008264557,
+        "min": 0.03044049999152776,
+        "max": 0.03268229099921882
+      },
+      "model_build_seconds": {
+        "median": 0.13105620900751092,
+        "min": 0.12874087500676978,
+        "max": 0.13164983299793676
+      },
+      "total_seconds": {
+        "median": 0.16149670899903867,
+        "min": 0.1614231660059886,
+        "max": 0.1633863330062013
+      },
+      "prepare_peak_process_bytes": {
+        "median": 69697536,
+        "min": 69599232,
+        "max": 69795840
+      },
+      "peak_process_bytes": {
+        "median": 87015424,
+        "min": 86310912,
+        "max": 87867392
+      }
+    },
+    {
+      "size": 100000,
+      "method": "python-dict",
+      "output_rows": 367912,
+      "import_seconds": {
+        "median": 0.04990858300880063,
+        "min": 0.049044792001950555,
+        "max": 0.05289983400143683
+      },
+      "filter_seconds": {
+        "median": 0.046459124991088174,
+        "min": 0.043349457992007956,
+        "max": 0.048093290999531746
+      },
+      "export_seconds": {
+        "median": 0.026083292003022507,
+        "min": 0.025440709010581486,
+        "max": 0.026646500002243556
+      },
+      "prepare_seconds": {
+        "median": 0.12301420800213236,
+        "min": 0.11847754199698102,
+        "max": 0.12643383401155006
+      },
+      "model_build_seconds": {
+        "median": 1.5725217919971328,
+        "min": 1.5698551669920562,
+        "max": 1.5824423750018468
+      },
+      "total_seconds": {
+        "median": 1.6962890010036062,
+        "min": 1.6955359999992652,
+        "max": 1.7009199169988278
+      },
+      "prepare_peak_process_bytes": {
+        "median": 170524672,
+        "min": 169984000,
+        "max": 170688512
+      },
+      "peak_process_bytes": {
+        "median": 363249664,
+        "min": 362577920,
+        "max": 363298816
+      }
+    },
+    {
+      "size": 100000,
+      "method": "relindex-rows",
+      "output_rows": 367912,
+      "import_seconds": {
+        "median": 0.2016484159976244,
+        "min": 0.19650499999988824,
+        "max": 0.2016735830111429
+      },
+      "filter_seconds": {
+        "median": 0.11953458299103659,
+        "min": 0.11938699999882374,
+        "max": 0.12293670899816789
+      },
+      "export_seconds": {
+        "median": 0.5650293329963461,
+        "min": 0.5562632499932079,
+        "max": 0.6014661250083009
+      },
+      "prepare_seconds": {
+        "median": 0.8844710419944022,
+        "min": 0.877298665989656,
+        "max": 0.9226742910104804
+      },
+      "model_build_seconds": {
+        "median": 1.5194217079988448,
+        "min": 1.5134652080014348,
+        "max": 1.5303035840042867
+      },
+      "total_seconds": {
+        "median": 2.414774625998689,
+        "min": 2.396720373988501,
+        "max": 2.436139499011915
+      },
+      "prepare_peak_process_bytes": {
+        "median": 202358784,
+        "min": 201326592,
+        "max": 202588160
+      },
+      "peak_process_bytes": {
+        "median": 364249088,
+        "min": 363839488,
+        "max": 365346816
+      }
+    },
+    {
+      "size": 100000,
+      "method": "relindex-mapping",
+      "output_rows": 367912,
+      "import_seconds": {
+        "median": 0.13935879099881276,
+        "min": 0.1344985000032466,
+        "max": 0.14329433300008532
+      },
+      "filter_seconds": {
+        "median": 0.11991620800108649,
+        "min": 0.11980966699775308,
+        "max": 0.12198437500046566
+      },
+      "export_seconds": {
+        "median": 0.40178458399896044,
+        "min": 0.4007012920046691,
+        "max": 0.413041499996325
+      },
+      "prepare_seconds": {
+        "median": 0.6631277499982389,
+        "min": 0.6550094590056688,
+        "max": 0.6762520409974968
+      },
+      "model_build_seconds": {
+        "median": 1.5301679170079296,
+        "min": 1.5290962089929963,
+        "max": 1.543545874999836
+      },
+      "total_seconds": {
+        "median": 2.198555334005505,
+        "min": 2.1932956670061685,
+        "max": 2.205348249990493
+      },
+      "prepare_peak_process_bytes": {
+        "median": 222265344,
+        "min": 221413376,
+        "max": 222478336
+      },
+      "peak_process_bytes": {
+        "median": 364068864,
+        "min": 363200512,
+        "max": 365363200
+      }
+    }
+  ]
+}

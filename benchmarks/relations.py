@@ -133,6 +133,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sizes", nargs="+", type=positive_int, default=[1000, 10000, 100000])
     parser.add_argument("--repetitions", type=positive_int, default=3)
+    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(METHODS))
     parser.add_argument("--output", type=Path, default=Path("benchmarks/results/latest.json"))
     parser.add_argument("--worker", choices=METHODS, help=argparse.SUPPRESS)
     parser.add_argument(
@@ -151,8 +152,8 @@ def main():
             case_samples = []
             # Rotate method order so every repetition does not favor the same method.
             for repetition in range(args.repetitions):
-                for offset in range(len(METHODS)):
-                    method = METHODS[(repetition + offset) % len(METHODS)]
+                for offset in range(len(args.methods)):
+                    method = args.methods[(repetition + offset) % len(args.methods)]
                     raw = subprocess.check_output(
                         [
                             sys.executable,
@@ -172,7 +173,7 @@ def main():
             if len({sample["result_sha256"] for sample in case_samples}) != 1:
                 raise RuntimeError(f"Result mismatch for {case=} {size=}")
             samples.extend(case_samples)
-            for method in METHODS:
+            for method in args.methods:
                 selected = [sample for sample in case_samples if sample["method"] == method]
                 times = [sample["total_seconds"] for sample in selected]
                 record = {
@@ -191,20 +192,26 @@ def main():
                 print(
                     f"{size:>7} {case:<7} {method:<14} {record['median_seconds']:.4f}s", flush=True
                 )
+    import relindex.relation
+
+    sources = {
+        "src/relindex/relation.py": Path(relindex.relation.__file__),
+        "benchmarks/relations.py": Path(__file__).resolve(),
+        "uv.lock": root / "uv.lock",
+    }
     report = {
         "created_at": datetime.now(UTC).isoformat(),
         "python": sys.version,
         "platform": platform.platform(),
         "processor": platform.machine(),
-        "versions": {name: importlib.metadata.version(name) for name in ("relindex", "duckdb")},
-        "source_sha256": {
-            str(path.relative_to(root)): hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in (
-                root / "src/relindex/relation.py",
-                Path(__file__).resolve(),
-                root / "uv.lock",
-            )
+        "versions": {
+            name: importlib.metadata.version(name)
+            for name in ("relindex",) + (("duckdb",) if "duckdb" in args.methods else ())
         },
+        "source_sha256": {
+            name: hashlib.sha256(path.read_bytes()).hexdigest() for name, path in sources.items()
+        },
+        "methods": args.methods,
         "repetitions": args.repetitions,
         "samples": samples,
         "summary": summary,

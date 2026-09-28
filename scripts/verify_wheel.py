@@ -66,6 +66,9 @@ e = a.join(b, on=('skill',)).project('worker', 'task')
 assert e.tuples() == ((1, 'task'),)
 d = Relation([('task',), ('uncovered',)], schema=('task',))
 assert e.group_by('task', over=d)[('uncovered',)] == ()
+m = Relation.from_mapping({'task': [1, 1], 'uncovered': []}, key='task', value='worker')
+assert m.project('worker', 'task') == e
+assert m.to_mapping(key='task', value='worker', over=d) == {'task': (1,), 'uncovered': ()}
 print('Core wheel works with no installed dependencies outside the source tree.')
 """,
             cwd=work,
@@ -97,10 +100,10 @@ print('Core wheel works with no installed dependencies outside the source tree.'
             requirements,
             cwd=work,
         )
-        for name in ("assignment.py", "network.py"):
+        for name in ("assignment.py", "network.py", "dictionary_assignment.py"):
             shutil.copy2(ROOT / "examples" / name, work / name)
             run(python, "-I", work / name, cwd=work)
-    print("Wheel, sdist, and both standalone examples verified.")
+    print("Wheel, sdist, and all standalone examples verified.")
 
 
 if __name__ == "__main__":

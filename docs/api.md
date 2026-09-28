@@ -38,6 +38,35 @@ Relations compare and hash by their ordered schema and row set. The compact
 representation displays the schema and row count. Relations expose no row
 iterator: use `tuples()` when passing keys to other libraries.
 
+### Importing a dictionary
+
+```python
+from relindex import Relation
+
+workers_by_task = {"t1": ["bob", "alice", "alice"], "t2": []}
+tasks = Relation(((task,) for task in workers_by_task), schema=("task",))
+candidates = Relation.from_mapping(workers_by_task, key="task", value="worker")
+assert candidates.schema == ("task", "worker")
+assert candidates.tuples() == (("t1", "alice"), ("t1", "bob"))
+```
+
+`Relation.from_mapping(mapping, *, key, value)` accepts a `Mapping` from a
+scalar label to an iterable of scalar labels. Lists, tuples, sets, and generators
+are supported; each bucket is consumed once and copied into immutable storage.
+`key` and `value` are required, distinct column names. The output schema is
+`(key, value)`. Keys and individual values follow the same built-in `int`/`str`
+rules as the row constructor, including validation of keys with empty buckets.
+
+A bare string, bytes-like object (`bytes`, `bytearray`, or `memoryview`), or
+nested mapping is rejected as a bucket. For example, write `{"t1": ["alice"]}`
+instead of `{"t1": "alice"}`. Non-iterable buckets and invalid labels raise
+`TypeError`; errors raised by an input iterator propagate.
+
+Empty buckets create no rows. The relation retains no hidden key-domain
+metadata: preserve the authoritative task domain separately for export. Keys
+missing from the input dictionary can only be detected against an independently
+supplied domain. An empty mapping still validates the column names.
+
 ## Operations
 
 All relation-valued operations return a new relation and remove duplicate
@@ -57,6 +86,7 @@ rows, including duplicates introduced by projection or joins.
 | `cross(other)` | Cartesian product with disjoint column names. |
 | `tuples()` | Canonically ordered tuple of row tuples. |
 | `group_by(*columns, over=domain)` | Full rows grouped over every declared target. |
+| `to_mapping(key=..., value=..., over=domain)` | One scalar key mapped to distinct scalar values over every declared target. |
 
 ### Projection, selection, and renaming
 
@@ -168,9 +198,42 @@ require `sum(x) == 1`, making an empty group infeasible. A capacity condition
 former or construct the relevant constant constraint. The examples show
 both cases and handle Pyomo's constant constraints explicitly.
 
-Grouping scans the source once after sorting it. Reuse the resulting groups
+Grouping scans the source once, then sorts the domain keys and each bucket's
+rows independently. Reuse the resulting groups
 when constructing constraints instead of scanning every candidate for every
 constraint target.
+
+## Exporting a dictionary of values
+
+```python
+workers_for_task = candidates.to_mapping(key="task", value="worker", over=tasks)
+assert list(workers_for_task.items()) == [("t1", ("alice", "bob")), ("t2", ())]
+
+scheduled = Relation(
+    [("alice", "t1", 1), ("alice", "t1", 2), ("bob", "t1", 1)],
+    schema=("worker", "task", "period"),
+)
+assert scheduled.to_mapping(key="task", value="worker", over=tasks) == workers_for_task
+```
+
+`to_mapping(*, key, value, over)` projects the two named columns, removes
+duplicate pairs, and returns an ordinary dictionary of scalar keys to tuple
+values. A one-element bucket remains a tuple. Source column order does not
+affect this shape, and other source columns are discarded.
+
+`key` and `value` must name distinct existing columns. The required `over`
+relation must have schema `(key,)`. Every domain key appears, including keys
+with no values; a source key outside the domain raises `ValueError`. An empty
+source and empty domain produce `{}`. Schema validation still runs on empty
+inputs. Keys and values follow the same canonical integer-before-string
+ordering as `tuples()`.
+
+The dictionary is an independent snapshot, and its tuple values are immutable.
+Retain and reuse it for repeated lookups. Conversion itself is eager; it does
+not attach a persistent index or cache to the relation. The implementation
+groups and deduplicates the requested values directly, without constructing a
+projected relation or full-row groups. `group_by()` continues to support
+composite keys and complete source rows with its original return shape.
 
 ## Empty and zero-column relations
 

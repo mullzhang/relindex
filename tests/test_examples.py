@@ -5,7 +5,7 @@ from itertools import product
 
 import pytest
 
-from examples import assignment, network
+from examples import assignment, dictionary_assignment, network
 from relindex import Relation
 
 pytestmark = pytest.mark.integration
@@ -103,4 +103,46 @@ def test_isolated_nonzero_demand_is_never_dropped(build):
     data = network.example_data()
     data = replace(data, supply={**data.supply, "isolated": -1, "A": 4})
     with pytest.raises(ValueError, match="Isolated node.*isolated"):
+        build(data)
+
+
+def test_dictionary_assignment_matches_independent_enumeration():
+    data = dictionary_assignment.example_data()
+    blocked = set(data.forbidden.tuples())
+    keys = [
+        (w, t) for t, workers in data.candidates.items() for w in workers if (t, w) not in blocked
+    ]
+    feasible = []
+    for bits in product((0, 1), repeat=len(keys)):
+        selected = tuple(k for k, bit in zip(keys, bits, strict=True) if bit)
+        if all(sum(t == task for _, t in selected) == 1 for (task,) in data.tasks.tuples()):
+            feasible.append((sum(data.cost[k] for k in selected), selected))
+    assert len(feasible) == 2
+    assert min(feasible)[0] == 3
+    assert dictionary_assignment.solve(data) == {"PuLP": min(feasible), "Pyomo": min(feasible)}
+    pulp_model, variables = dictionary_assignment.build_pulp(data)
+    pyomo_model = dictionary_assignment.build_pyomo(data)
+    assert set(variables) == set(pyomo_model.E) == set(keys)
+    assert len(variables) == len(pulp_model.variables()) == len(pyomo_model.x) == 4
+    assert len(pulp_model.constraints()) == len(pyomo_model.cover) == 3
+
+
+@pytest.mark.parametrize(
+    "build", [dictionary_assignment.build_pulp, dictionary_assignment.build_pyomo]
+)
+@pytest.mark.parametrize("gap", ["empty-bucket", "domain-only", "filtered-out"])
+def test_dictionary_assignment_reports_uncovered_tasks(build, gap):
+    data = dictionary_assignment.example_data()
+    if gap == "filtered-out":
+        data = replace(
+            data,
+            forbidden=data.forbidden.union(Relation([("t1", "carol")], schema=("task", "worker"))),
+        )
+        task = "t1"
+    else:
+        data = replace(data, tasks=data.tasks.union(Relation([("t4",)], schema=("task",))))
+        if gap == "empty-bucket":
+            data = replace(data, candidates={**data.candidates, "t4": []})
+        task = "t4"
+    with pytest.raises(ValueError, match=f"Mandatory tasks without candidates.*{task}"):
         build(data)

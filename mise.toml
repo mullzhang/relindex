@@ -25,17 +25,18 @@ run = "uv run --locked --group examples pytest"
 
 [tasks."test:core"]
 description = "Run relation tests without modeling libraries"
-run = "uv run --locked pytest tests/test_relation.py tests/test_algebra.py"
+run = "uv run --locked pytest tests/test_relation.py tests/test_algebra.py tests/test_mapping.py"
 
 [tasks.format]
 description = "Format Python source"
 run = "uv run --locked ruff format ."
 
 [tasks.examples]
-description = "Solve the assignment and network examples"
+description = "Solve the relation, dictionary, and network examples"
 run = [
     "uv run --locked --group examples python examples/assignment.py",
     "uv run --locked --group examples python examples/network.py",
+    "uv run --locked --group examples python examples/dictionary_assignment.py",
 ]
 
 [tasks.benchmark]
@@ -45,6 +46,10 @@ run = "uv run --locked --group benchmark python benchmarks/relations.py"
 [tasks."benchmark:models"]
 description = "Measure model construction and solving separately"
 run = "uv run --locked --group examples python -m benchmarks.models"
+
+[tasks."benchmark:mappings"]
+description = "Compare dictionary conversion and model construction costs"
+run = "uv run --locked --group examples python -m benchmarks.mappings"
 
 [tasks.build]
 description = "Build the wheel and source distribution"

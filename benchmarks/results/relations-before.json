@@ -1,0 +1,1151 @@
+{
+  "created_at": "2026-09-28T16:21:11.257502+00:00",
+  "python": "3.14.6 (main, Jul 18 2026, 17:05:49) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "processor": "arm64",
+  "versions": {
+    "relindex": "0.1.0"
+  },
+  "source_sha256": {
+    "src/relindex/relation.py": "51dcbdce93c7b61595d928a4251a990b6b84cfe66326c0ef8324ad7e533d6a26",
+    "benchmarks/relations.py": "c538ae8e924963b93bf58d1c567c82dc432cb21ec8cdb477a3e7aca7f4bc107b",
+    "uv.lock": "1f311f6dd48267effdaba5206861ca48463d5aaf037d5bfc158baa332ecef741"
+  },
+  "methods": [
+    "indexed-python",
+    "relindex"
+  ],
+  "repetitions": 3,
+  "samples": [
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.0003518330049701035,
+      "group_seconds": 0.00020383299852255732,
+      "total_seconds": 0.0005556660034926608,
+      "peak_process_bytes": 28786688,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.0042888339958153665,
+      "group_seconds": 0.00154974999895785,
+      "total_seconds": 0.0058385839947732165,
+      "peak_process_bytes": 29130752,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.004438624993781559,
+      "group_seconds": 0.0016150830051628873,
+      "total_seconds": 0.0060537079989444464,
+      "peak_process_bytes": 29327360,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.0003614579909481108,
+      "group_seconds": 0.0002130840002791956,
+      "total_seconds": 0.0005745419912273064,
+      "peak_process_bytes": 28868608,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.00035262499295640737,
+      "group_seconds": 0.00021166600345168263,
+      "total_seconds": 0.00056429099640809,
+      "peak_process_bytes": 28770304,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 1000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 1000,
+      "output_rows": 909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0009080919080919081,
+      "groups": 1001,
+      "empty_groups": 92,
+      "prepare_seconds": 0.004578292006044649,
+      "group_seconds": 0.0015342910046456382,
+      "total_seconds": 0.006112583010690287,
+      "peak_process_bytes": 29310976,
+      "result_sha256": "0a4b9665e33c169ecee33f9426e5c1478ddb711fcae4d223a9d7e60b21a45732",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.0010776659910334274,
+      "group_seconds": 0.00044991700269747525,
+      "total_seconds": 0.0015275829937309027,
+      "peak_process_bytes": 28999680,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.012136042001657188,
+      "group_seconds": 0.00552216698997654,
+      "total_seconds": 0.017658208991633728,
+      "peak_process_bytes": 30588928,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.011926499995752238,
+      "group_seconds": 0.005183834000490606,
+      "total_seconds": 0.017110333996242844,
+      "peak_process_bytes": 30638080,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.0011887500004377216,
+      "group_seconds": 0.0004464999947231263,
+      "total_seconds": 0.001635249995160848,
+      "peak_process_bytes": 29147136,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.001067874996806495,
+      "group_seconds": 0.0004397089942358434,
+      "total_seconds": 0.0015075839910423383,
+      "peak_process_bytes": 29081600,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 1000,
+        "requires": 1000,
+        "forbidden": 91
+      },
+      "skill_buckets": 250,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 4000,
+      "output_rows": 3909,
+      "domain_sizes": {
+        "workers": 1000,
+        "tasks": 1001
+      },
+      "possible_pairs": 1001000,
+      "density": 0.0039050949050949053,
+      "groups": 1001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.011701250012265518,
+      "group_seconds": 0.005089375001261942,
+      "total_seconds": 0.01679062501352746,
+      "peak_process_bytes": 30474240,
+      "result_sha256": "e8ac08d3e3332efb3aa9a2884b2930198747586abaebd55349fd3c9bae6c51be",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.0044420829945011064,
+      "group_seconds": 0.002416832998278551,
+      "total_seconds": 0.006858915992779657,
+      "peak_process_bytes": 36601856,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.0469715420040302,
+      "group_seconds": 0.021183165998081677,
+      "total_seconds": 0.06815470800211187,
+      "peak_process_bytes": 38666240,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.06935683400661219,
+      "group_seconds": 0.021400707992142998,
+      "total_seconds": 0.09075754199875519,
+      "peak_process_bytes": 40108032,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.0043141249916516244,
+      "group_seconds": 0.0023468330036848783,
+      "total_seconds": 0.006660957995336503,
+      "peak_process_bytes": 36569088,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.004191416999674402,
+      "group_seconds": 0.002443541001412086,
+      "total_seconds": 0.006634958001086488,
+      "peak_process_bytes": 36503552,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 10000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 10000,
+      "output_rows": 9090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 9.089091090890911e-05,
+      "groups": 10001,
+      "empty_groups": 911,
+      "prepare_seconds": 0.046735540992813185,
+      "group_seconds": 0.02196925001044292,
+      "total_seconds": 0.0687047910032561,
+      "peak_process_bytes": 39174144,
+      "result_sha256": "a61b563a8a669cdf7a5cec3e758d28cd32cac706105b3b5e927d7e75a92c1025",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.01565137499710545,
+      "group_seconds": 0.0042646249930839986,
+      "total_seconds": 0.019915999990189448,
+      "peak_process_bytes": 39174144,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.1420640840078704,
+      "group_seconds": 0.07534183299867436,
+      "total_seconds": 0.21740591700654477,
+      "peak_process_bytes": 52936704,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.14738037499773782,
+      "group_seconds": 0.07309791599982418,
+      "total_seconds": 0.220478290997562,
+      "peak_process_bytes": 53592064,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.015246458002366126,
+      "group_seconds": 0.0043916669965256006,
+      "total_seconds": 0.019638124998891726,
+      "peak_process_bytes": 39927808,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.014837750000879169,
+      "group_seconds": 0.004467708000447601,
+      "total_seconds": 0.01930545800132677,
+      "peak_process_bytes": 39501824,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 10000,
+        "requires": 10000,
+        "forbidden": 910
+      },
+      "skill_buckets": 2500,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 40000,
+      "output_rows": 39090,
+      "domain_sizes": {
+        "workers": 10000,
+        "tasks": 10001
+      },
+      "possible_pairs": 100010000,
+      "density": 0.00039086091390860914,
+      "groups": 10001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.1432574159989599,
+      "group_seconds": 0.07546287500008475,
+      "total_seconds": 0.21872029099904466,
+      "peak_process_bytes": 54738944,
+      "result_sha256": "3b2337bce1505a916a799781577ac91bfeb9e110d3a80068d1521c9228ea1613",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.06443345799925737,
+      "group_seconds": 0.03568345899111591,
+      "total_seconds": 0.10011691699037328,
+      "peak_process_bytes": 124305408,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.6626064580050297,
+      "group_seconds": 0.3497960419917945,
+      "total_seconds": 1.0124024999968242,
+      "peak_process_bytes": 130072576,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.6440307500015479,
+      "group_seconds": 0.354327666995232,
+      "total_seconds": 0.9983584169967799,
+      "peak_process_bytes": 131989504,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.06458249999559484,
+      "group_seconds": 0.035977250008727424,
+      "total_seconds": 0.10055975000432227,
+      "peak_process_bytes": 125386752,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.061438249991624616,
+      "group_seconds": 0.03537312500702683,
+      "total_seconds": 0.09681137499865144,
+      "peak_process_bytes": 127467520,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 100000,
+      "max_rows_per_skill_per_input": 1,
+      "join_rows_before_exclusion": 100000,
+      "output_rows": 90909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 9.090809091909081e-06,
+      "groups": 100001,
+      "empty_groups": 9092,
+      "prepare_seconds": 0.6368324590002885,
+      "group_seconds": 0.3569320000096923,
+      "total_seconds": 0.9937644590099808,
+      "peak_process_bytes": 131235840,
+      "result_sha256": "3655bbc6fc7255edd44ec30f419eec52540362d4a4454dbd4dafbe94e2c4bdc8",
+      "repetition": 2
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.2935694999905536,
+      "group_seconds": 0.07439654199697543,
+      "total_seconds": 0.367966041987529,
+      "peak_process_bytes": 155222016,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.1079303340084152,
+      "group_seconds": 1.2490121659939177,
+      "total_seconds": 3.356942500002333,
+      "peak_process_bytes": 268599296,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 0
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.0890391660068417,
+      "group_seconds": 1.2341333340009442,
+      "total_seconds": 3.323172500007786,
+      "peak_process_bytes": 269680640,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.2968307499977527,
+      "group_seconds": 0.07452920799551066,
+      "total_seconds": 0.3713599579932634,
+      "peak_process_bytes": 155779072,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 1
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 0.2832855419983389,
+      "group_seconds": 0.0748350830108393,
+      "total_seconds": 0.3581206250091782,
+      "peak_process_bytes": 156975104,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 2
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "input_rows": {
+        "has_skill": 100000,
+        "requires": 100000,
+        "forbidden": 9091
+      },
+      "skill_buckets": 25000,
+      "max_rows_per_skill_per_input": 4,
+      "join_rows_before_exclusion": 400000,
+      "output_rows": 390909,
+      "domain_sizes": {
+        "workers": 100000,
+        "tasks": 100001
+      },
+      "possible_pairs": 10000100000,
+      "density": 3.909050909490905e-05,
+      "groups": 100001,
+      "empty_groups": 1,
+      "prepare_seconds": 2.076774250002927,
+      "group_seconds": 1.2438563750038156,
+      "total_seconds": 3.3206306250067428,
+      "peak_process_bytes": 267862016,
+      "result_sha256": "3b9a05785d5152c8f33efe1f3acb4df74aacd88d4ce8df79f675a8603a49d908",
+      "repetition": 2
+    }
+  ],
+  "summary": [
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "sparse",
+      "output_rows": 909,
+      "median_seconds": 0.00056429099640809,
+      "min_seconds": 0.0005556660034926608,
+      "max_seconds": 0.0005745419912273064,
+      "median_peak_process_bytes": 28786688
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "sparse",
+      "output_rows": 909,
+      "median_seconds": 0.0060537079989444464,
+      "min_seconds": 0.0058385839947732165,
+      "max_seconds": 0.006112583010690287,
+      "median_peak_process_bytes": 29310976
+    },
+    {
+      "method": "indexed-python",
+      "size": 1000,
+      "case": "fanout",
+      "output_rows": 3909,
+      "median_seconds": 0.0015275829937309027,
+      "min_seconds": 0.0015075839910423383,
+      "max_seconds": 0.001635249995160848,
+      "median_peak_process_bytes": 29081600
+    },
+    {
+      "method": "relindex",
+      "size": 1000,
+      "case": "fanout",
+      "output_rows": 3909,
+      "median_seconds": 0.017110333996242844,
+      "min_seconds": 0.01679062501352746,
+      "max_seconds": 0.017658208991633728,
+      "median_peak_process_bytes": 30588928
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "sparse",
+      "output_rows": 9090,
+      "median_seconds": 0.006660957995336503,
+      "min_seconds": 0.006634958001086488,
+      "max_seconds": 0.006858915992779657,
+      "median_peak_process_bytes": 36569088
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "sparse",
+      "output_rows": 9090,
+      "median_seconds": 0.0687047910032561,
+      "min_seconds": 0.06815470800211187,
+      "max_seconds": 0.09075754199875519,
+      "median_peak_process_bytes": 39174144
+    },
+    {
+      "method": "indexed-python",
+      "size": 10000,
+      "case": "fanout",
+      "output_rows": 39090,
+      "median_seconds": 0.019638124998891726,
+      "min_seconds": 0.01930545800132677,
+      "max_seconds": 0.019915999990189448,
+      "median_peak_process_bytes": 39501824
+    },
+    {
+      "method": "relindex",
+      "size": 10000,
+      "case": "fanout",
+      "output_rows": 39090,
+      "median_seconds": 0.21872029099904466,
+      "min_seconds": 0.21740591700654477,
+      "max_seconds": 0.220478290997562,
+      "median_peak_process_bytes": 53592064
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "sparse",
+      "output_rows": 90909,
+      "median_seconds": 0.10011691699037328,
+      "min_seconds": 0.09681137499865144,
+      "max_seconds": 0.10055975000432227,
+      "median_peak_process_bytes": 125386752
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "sparse",
+      "output_rows": 90909,
+      "median_seconds": 0.9983584169967799,
+      "min_seconds": 0.9937644590099808,
+      "max_seconds": 1.0124024999968242,
+      "median_peak_process_bytes": 131235840
+    },
+    {
+      "method": "indexed-python",
+      "size": 100000,
+      "case": "fanout",
+      "output_rows": 390909,
+      "median_seconds": 0.367966041987529,
+      "min_seconds": 0.3581206250091782,
+      "max_seconds": 0.3713599579932634,
+      "median_peak_process_bytes": 155779072
+    },
+    {
+      "method": "relindex",
+      "size": 100000,
+      "case": "fanout",
+      "output_rows": 390909,
+      "median_seconds": 3.323172500007786,
+      "min_seconds": 3.3206306250067428,
+      "max_seconds": 3.356942500002333,
+      "median_peak_process_bytes": 268599296
+    }
+  ]
+}

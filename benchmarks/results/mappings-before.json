@@ -1,0 +1,672 @@
+{
+  "created_at": "2026-09-28T16:20:51.181068+00:00",
+  "python": "3.14.6 (main, Jul 18 2026, 17:05:49) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "relindex": "0.1.0",
+    "pulp": "4.0.0"
+  },
+  "methods": [
+    "python-dict",
+    "relindex-rows"
+  ],
+  "repetitions": 3,
+  "source_sha256": {
+    "benchmarks/mappings.py": "a7995cb3488c9b1d5bcd0f60123545af7cb6f126e437c681bd9bff87318599d6",
+    "benchmarks/relations.py": "c538ae8e924963b93bf58d1c567c82dc432cb21ec8cdb477a3e7aca7f4bc107b",
+    "uv.lock": "1f311f6dd48267effdaba5206861ca48463d5aaf037d5bfc158baa332ecef741",
+    "src/relindex/relation.py": "51dcbdce93c7b61595d928a4251a990b6b84cfe66326c0ef8324ad7e533d6a26"
+  },
+  "samples": [
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.00012166600208729506,
+      "filter_seconds": 0.00035020899667870253,
+      "export_seconds": 0.00020858300558757037,
+      "prepare_seconds": 0.000680458004353568,
+      "model_build_seconds": 0.012430292001226917,
+      "total_seconds": 0.013110750005580485,
+      "prepare_peak_process_bytes": 54951936,
+      "peak_process_bytes": 56983552,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0020785420056199655,
+      "filter_seconds": 0.0023908750008558854,
+      "export_seconds": 0.0054143750021466985,
+      "prepare_seconds": 0.00988379200862255,
+      "model_build_seconds": 0.014215167000656947,
+      "total_seconds": 0.024098959009279497,
+      "prepare_peak_process_bytes": 55853056,
+      "peak_process_bytes": 57327616,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0020304169884184375,
+      "filter_seconds": 0.002253042010124773,
+      "export_seconds": 0.005057999995187856,
+      "prepare_seconds": 0.009341458993731067,
+      "model_build_seconds": 0.0130266250052955,
+      "total_seconds": 0.022368083999026567,
+      "prepare_peak_process_bytes": 55689216,
+      "peak_process_bytes": 57344000,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.00013833300909027457,
+      "filter_seconds": 0.0003757499944185838,
+      "export_seconds": 0.00022375000116880983,
+      "prepare_seconds": 0.0007378330046776682,
+      "model_build_seconds": 0.012390125004458241,
+      "total_seconds": 0.01312795800913591,
+      "prepare_peak_process_bytes": 55148544,
+      "peak_process_bytes": 56885248,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.00012279200018383563,
+      "filter_seconds": 0.00035679200664162636,
+      "export_seconds": 0.00022162499953992665,
+      "prepare_seconds": 0.0007012090063653886,
+      "model_build_seconds": 0.013291958006448112,
+      "total_seconds": 0.013993167012813501,
+      "prepare_peak_process_bytes": 54902784,
+      "peak_process_bytes": 56590336,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 1000,
+      "input_values": 4705,
+      "output_rows": 3679,
+      "groups": 1001,
+      "empty_groups": 60,
+      "variables": 3679,
+      "constraints": 1001,
+      "constraint_nonzeros": 3679,
+      "import_seconds": 0.0022075000015320256,
+      "filter_seconds": 0.002456208996591158,
+      "export_seconds": 0.005080957998870872,
+      "prepare_seconds": 0.009744666996994056,
+      "model_build_seconds": 0.014021458002389409,
+      "total_seconds": 0.023766124999383464,
+      "prepare_peak_process_bytes": 55853056,
+      "peak_process_bytes": 57327616,
+      "result_sha256": "47055ae3c867e963c5b328440ad16e4eea5a3b4185b205e1b76c85a49ab66592",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.0028580409998539835,
+      "filter_seconds": 0.0035157499951310456,
+      "export_seconds": 0.002336125005967915,
+      "prepare_seconds": 0.008709916000952944,
+      "model_build_seconds": 0.1285709579969989,
+      "total_seconds": 0.13728087399795186,
+      "prepare_peak_process_bytes": 63963136,
+      "peak_process_bytes": 85901312,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.02222516600158997,
+      "filter_seconds": 0.02951487500104122,
+      "export_seconds": 0.07652649999363348,
+      "prepare_seconds": 0.12826654099626467,
+      "model_build_seconds": 0.12608591601019725,
+      "total_seconds": 0.2543524570064619,
+      "prepare_peak_process_bytes": 76283904,
+      "peak_process_bytes": 90570752,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.02159058299730532,
+      "filter_seconds": 0.02552208300039638,
+      "export_seconds": 0.08039283400285058,
+      "prepare_seconds": 0.12750550000055227,
+      "model_build_seconds": 0.13071937501081266,
+      "total_seconds": 0.25822487501136493,
+      "prepare_peak_process_bytes": 76365824,
+      "peak_process_bytes": 92438528,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.0027784580015577376,
+      "filter_seconds": 0.003486124987830408,
+      "export_seconds": 0.0023217080015456304,
+      "prepare_seconds": 0.008586290990933776,
+      "model_build_seconds": 0.12768633400264662,
+      "total_seconds": 0.1362726249935804,
+      "prepare_peak_process_bytes": 63897600,
+      "peak_process_bytes": 84606976,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.002745249992585741,
+      "filter_seconds": 0.003597500006435439,
+      "export_seconds": 0.0023342920030700043,
+      "prepare_seconds": 0.008677042002091184,
+      "model_build_seconds": 0.13092333399981726,
+      "total_seconds": 0.13960037600190844,
+      "prepare_peak_process_bytes": 64880640,
+      "peak_process_bytes": 85245952,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 10000,
+      "input_values": 47055,
+      "output_rows": 36788,
+      "groups": 10001,
+      "empty_groups": 590,
+      "variables": 36788,
+      "constraints": 10001,
+      "constraint_nonzeros": 36788,
+      "import_seconds": 0.020673125007306226,
+      "filter_seconds": 0.03011970799707342,
+      "export_seconds": 0.08277162499143742,
+      "prepare_seconds": 0.13356445799581707,
+      "model_build_seconds": 0.16586179200385232,
+      "total_seconds": 0.2994262499996694,
+      "prepare_peak_process_bytes": 75890688,
+      "peak_process_bytes": 92225536,
+      "result_sha256": "1bc5ef3ec8cd7815a01ad25127088eac359297dca05d9c4e338493a9936c43e3",
+      "repetition": 2
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.052736750003532507,
+      "filter_seconds": 0.04258787499566097,
+      "export_seconds": 0.02718358300626278,
+      "prepare_seconds": 0.12250820800545625,
+      "model_build_seconds": 1.5591372499911813,
+      "total_seconds": 1.6816454579966376,
+      "prepare_peak_process_bytes": 171753472,
+      "peak_process_bytes": 362283008,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.274696791995666,
+      "filter_seconds": 0.3213634580024518,
+      "export_seconds": 1.1678045419976115,
+      "prepare_seconds": 1.7638647919957293,
+      "model_build_seconds": 1.5369082909892313,
+      "total_seconds": 3.3007730829849606,
+      "prepare_peak_process_bytes": 285523968,
+      "peak_process_bytes": 382730240,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 0
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.26105754100717604,
+      "filter_seconds": 0.3181466249952791,
+      "export_seconds": 1.1684547500044573,
+      "prepare_seconds": 1.7476589160069125,
+      "model_build_seconds": 1.6129274999984773,
+      "total_seconds": 3.3605864160053898,
+      "prepare_peak_process_bytes": 285720576,
+      "peak_process_bytes": 383107072,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.04833491699537262,
+      "filter_seconds": 0.041449458003626205,
+      "export_seconds": 0.027325292001478374,
+      "prepare_seconds": 0.1171096670004772,
+      "model_build_seconds": 1.5665274999919347,
+      "total_seconds": 1.683637166992412,
+      "prepare_peak_process_bytes": 172097536,
+      "peak_process_bytes": 363970560,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 1
+    },
+    {
+      "method": "python-dict",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.048633708007400855,
+      "filter_seconds": 0.04402766699786298,
+      "export_seconds": 0.0269743329990888,
+      "prepare_seconds": 0.11963570800435264,
+      "model_build_seconds": 1.5864573750004638,
+      "total_seconds": 1.7060930830048164,
+      "prepare_peak_process_bytes": 171409408,
+      "peak_process_bytes": 362053632,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 2
+    },
+    {
+      "method": "relindex-rows",
+      "size": 100000,
+      "input_values": 470585,
+      "output_rows": 367912,
+      "groups": 100001,
+      "empty_groups": 5884,
+      "variables": 367912,
+      "constraints": 100001,
+      "constraint_nonzeros": 367912,
+      "import_seconds": 0.27887125000415836,
+      "filter_seconds": 0.32921504200203344,
+      "export_seconds": 1.1673387919872766,
+      "prepare_seconds": 1.7754250839934684,
+      "model_build_seconds": 1.5501485419954406,
+      "total_seconds": 3.325573625988909,
+      "prepare_peak_process_bytes": 285343744,
+      "peak_process_bytes": 381583360,
+      "result_sha256": "526108d507b13f0c3c618d6793495a6155dddae667e49a4fb249c289846dab80",
+      "repetition": 2
+    }
+  ],
+  "summary": [
+    {
+      "size": 1000,
+      "method": "python-dict",
+      "output_rows": 3679,
+      "import_seconds": {
+        "median": 0.00012279200018383563,
+        "min": 0.00012166600208729506,
+        "max": 0.00013833300909027457
+      },
+      "filter_seconds": {
+        "median": 0.00035679200664162636,
+        "min": 0.00035020899667870253,
+        "max": 0.0003757499944185838
+      },
+      "export_seconds": {
+        "median": 0.00022162499953992665,
+        "min": 0.00020858300558757037,
+        "max": 0.00022375000116880983
+      },
+      "prepare_seconds": {
+        "median": 0.0007012090063653886,
+        "min": 0.000680458004353568,
+        "max": 0.0007378330046776682
+      },
+      "model_build_seconds": {
+        "median": 0.012430292001226917,
+        "min": 0.012390125004458241,
+        "max": 0.013291958006448112
+      },
+      "total_seconds": {
+        "median": 0.01312795800913591,
+        "min": 0.013110750005580485,
+        "max": 0.013993167012813501
+      },
+      "prepare_peak_process_bytes": {
+        "median": 54951936,
+        "min": 54902784,
+        "max": 55148544
+      },
+      "peak_process_bytes": {
+        "median": 56885248,
+        "min": 56590336,
+        "max": 56983552
+      }
+    },
+    {
+      "size": 1000,
+      "method": "relindex-rows",
+      "output_rows": 3679,
+      "import_seconds": {
+        "median": 0.0020785420056199655,
+        "min": 0.0020304169884184375,
+        "max": 0.0022075000015320256
+      },
+      "filter_seconds": {
+        "median": 0.0023908750008558854,
+        "min": 0.002253042010124773,
+        "max": 0.002456208996591158
+      },
+      "export_seconds": {
+        "median": 0.005080957998870872,
+        "min": 0.005057999995187856,
+        "max": 0.0054143750021466985
+      },
+      "prepare_seconds": {
+        "median": 0.009744666996994056,
+        "min": 0.009341458993731067,
+        "max": 0.00988379200862255
+      },
+      "model_build_seconds": {
+        "median": 0.014021458002389409,
+        "min": 0.0130266250052955,
+        "max": 0.014215167000656947
+      },
+      "total_seconds": {
+        "median": 0.023766124999383464,
+        "min": 0.022368083999026567,
+        "max": 0.024098959009279497
+      },
+      "prepare_peak_process_bytes": {
+        "median": 55853056,
+        "min": 55689216,
+        "max": 55853056
+      },
+      "peak_process_bytes": {
+        "median": 57327616,
+        "min": 57327616,
+        "max": 57344000
+      }
+    },
+    {
+      "size": 10000,
+      "method": "python-dict",
+      "output_rows": 36788,
+      "import_seconds": {
+        "median": 0.0027784580015577376,
+        "min": 0.002745249992585741,
+        "max": 0.0028580409998539835
+      },
+      "filter_seconds": {
+        "median": 0.0035157499951310456,
+        "min": 0.003486124987830408,
+        "max": 0.003597500006435439
+      },
+      "export_seconds": {
+        "median": 0.0023342920030700043,
+        "min": 0.0023217080015456304,
+        "max": 0.002336125005967915
+      },
+      "prepare_seconds": {
+        "median": 0.008677042002091184,
+        "min": 0.008586290990933776,
+        "max": 0.008709916000952944
+      },
+      "model_build_seconds": {
+        "median": 0.1285709579969989,
+        "min": 0.12768633400264662,
+        "max": 0.13092333399981726
+      },
+      "total_seconds": {
+        "median": 0.13728087399795186,
+        "min": 0.1362726249935804,
+        "max": 0.13960037600190844
+      },
+      "prepare_peak_process_bytes": {
+        "median": 63963136,
+        "min": 63897600,
+        "max": 64880640
+      },
+      "peak_process_bytes": {
+        "median": 85245952,
+        "min": 84606976,
+        "max": 85901312
+      }
+    },
+    {
+      "size": 10000,
+      "method": "relindex-rows",
+      "output_rows": 36788,
+      "import_seconds": {
+        "median": 0.02159058299730532,
+        "min": 0.020673125007306226,
+        "max": 0.02222516600158997
+      },
+      "filter_seconds": {
+        "median": 0.02951487500104122,
+        "min": 0.02552208300039638,
+        "max": 0.03011970799707342
+      },
+      "export_seconds": {
+        "median": 0.08039283400285058,
+        "min": 0.07652649999363348,
+        "max": 0.08277162499143742
+      },
+      "prepare_seconds": {
+        "median": 0.12826654099626467,
+        "min": 0.12750550000055227,
+        "max": 0.13356445799581707
+      },
+      "model_build_seconds": {
+        "median": 0.13071937501081266,
+        "min": 0.12608591601019725,
+        "max": 0.16586179200385232
+      },
+      "total_seconds": {
+        "median": 0.25822487501136493,
+        "min": 0.2543524570064619,
+        "max": 0.2994262499996694
+      },
+      "prepare_peak_process_bytes": {
+        "median": 76283904,
+        "min": 75890688,
+        "max": 76365824
+      },
+      "peak_process_bytes": {
+        "median": 92225536,
+        "min": 90570752,
+        "max": 92438528
+      }
+    },
+    {
+      "size": 100000,
+      "method": "python-dict",
+      "output_rows": 367912,
+      "import_seconds": {
+        "median": 0.048633708007400855,
+        "min": 0.04833491699537262,
+        "max": 0.052736750003532507
+      },
+      "filter_seconds": {
+        "median": 0.04258787499566097,
+        "min": 0.041449458003626205,
+        "max": 0.04402766699786298
+      },
+      "export_seconds": {
+        "median": 0.02718358300626278,
+        "min": 0.0269743329990888,
+        "max": 0.027325292001478374
+      },
+      "prepare_seconds": {
+        "median": 0.11963570800435264,
+        "min": 0.1171096670004772,
+        "max": 0.12250820800545625
+      },
+      "model_build_seconds": {
+        "median": 1.5665274999919347,
+        "min": 1.5591372499911813,
+        "max": 1.5864573750004638
+      },
+      "total_seconds": {
+        "median": 1.683637166992412,
+        "min": 1.6816454579966376,
+        "max": 1.7060930830048164
+      },
+      "prepare_peak_process_bytes": {
+        "median": 171753472,
+        "min": 171409408,
+        "max": 172097536
+      },
+      "peak_process_bytes": {
+        "median": 362283008,
+        "min": 362053632,
+        "max": 363970560
+      }
+    },
+    {
+      "size": 100000,
+      "method": "relindex-rows",
+      "output_rows": 367912,
+      "import_seconds": {
+        "median": 0.274696791995666,
+        "min": 0.26105754100717604,
+        "max": 0.27887125000415836
+      },
+      "filter_seconds": {
+        "median": 0.3213634580024518,
+        "min": 0.3181466249952791,
+        "max": 0.32921504200203344
+      },
+      "export_seconds": {
+        "median": 1.1678045419976115,
+        "min": 1.1673387919872766,
+        "max": 1.1684547500044573
+      },
+      "prepare_seconds": {
+        "median": 1.7638647919957293,
+        "min": 1.7476589160069125,
+        "max": 1.7754250839934684
+      },
+      "model_build_seconds": {
+        "median": 1.5501485419954406,
+        "min": 1.5369082909892313,
+        "max": 1.6129274999984773
+      },
+      "total_seconds": {
+        "median": 3.325573625988909,
+        "min": 3.3007730829849606,
+        "max": 3.3605864160053898
+      },
+      "prepare_peak_process_bytes": {
+        "median": 285523968,
+        "min": 285343744,
+        "max": 285720576
+      },
+      "peak_process_bytes": {
+        "median": 382730240,
+        "min": 381583360,
+        "max": 383107072
+      }
+    }
+  ]
+}

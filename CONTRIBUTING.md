@@ -55,6 +55,10 @@ assignment example is checked against all 32 binary assignments, of which
 four are feasible. The network example is checked against independent flow
 enumeration on a small integral instance. Both examples retain the complete
 constraint domain, including unused workers or isolated nodes.
+Dictionary conversions are checked against independent comprehensions, including
+mixed label types and wider projections. The dictionary assignment example is
+checked against all 16 binary assignments and rejects uncovered tasks before
+building either model.
 
 `verify:wheel` builds a wheel and source distribution, rebuilds the wheel
 from the source distribution, and compares package source bytes. It then
@@ -74,6 +78,7 @@ pass alone does not establish remote CI status.
 ```sh
 mise run benchmark
 mise run benchmark:models
+mise run benchmark:mappings
 ```
 
 The relation benchmark runs on macOS or Linux and reports fresh-process
@@ -85,7 +90,7 @@ time does not become a relation-performance claim. See
 ## Package boundaries
 
 `src/relindex/relation.py` owns the immutable relation contract, validation,
-set operations, joins, and grouping. `src/relindex/__init__.py` exports
+set operations, joins, grouping, and dictionary conversions. `src/relindex/__init__.py` exports
 `Relation`. Examples own modeling-library calls and business assumptions;
 they are deliberately outside the installed package. Benchmark and release
 checks are development tools, not public API.

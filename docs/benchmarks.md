@@ -1,10 +1,10 @@
 # Benchmarks
 
-relindex trades additional validation and relation objects for explicit index
-semantics. On this workload, handwritten indexed Python is about 9-12 times
-faster. Choose relindex for its contract and readable transformations when
-that overhead is acceptable. These measurements do not establish a general
-performance advantage or a supported maximum size.
+relindex trades validation, immutable relations, and deterministic exports for
+explicit index semantics. The optimized implementation reduces repeated
+validation, tuple construction, and global sorting. Handwritten dictionaries
+remain faster in the measured workloads. These measurements do not establish
+a general performance advantage or a supported maximum size.
 
 ## Reproduce
 
@@ -14,6 +14,7 @@ From the repository root on macOS or Linux:
 mise run setup
 mise run benchmark
 mise run benchmark:models
+mise run benchmark:mappings
 ```
 
 For a shorter relation run:
@@ -76,6 +77,10 @@ sampled before fingerprint calculation. The unit conversion accounts for
 macOS bytes and Linux KiB. These scripts do not support Windows RSS reporting.
 
 ## Recorded relation results
+
+This section records the original implementation at `4f7c645`. See the
+optimization comparison below for current measurements; the reports preserve
+the exact source hashes used for each run.
 
 Run on 2026-09-29 JST (2026-09-28 UTC), macOS 27.0 arm64,
 CPython 3.14.6, relindex 0.1.0, and DuckDB 1.5.6. All 54 measured
@@ -142,4 +147,140 @@ has three. The network's four constraints include the isolated node.
 Per-sample times, ranges, process peak RSS, and version/source metadata are in
 the model report. These tiny models establish working integration and separate
 cost categories; they do not establish scaling or relative solver performance.
-Larger model-building workloads remain unmeasured.
+The dictionary benchmark below measures larger PuLP construction workloads;
+it does not solve those models or extend these solver-performance results.
+
+## Dictionary conversion and optimization
+
+[mappings.py](../benchmarks/mappings.py) starts from an existing dictionary of
+task labels to lists of worker labels. Each nonempty bucket has four candidates
+and one deliberate duplicate. Every seventeenth task has an empty bucket;
+the explicit task domain also includes one key absent from the dictionary.
+Every eleventh diagonal task-worker pair is excluded. Input keys are inserted
+in descending order so canonical output order requires actual sorting.
+
+The three methods produce exactly the same dictionary with sorted scalar keys,
+distinct sorted tuple values, and empty buckets:
+
+| Method | Preparation |
+| --- | --- |
+| `python-dict` | Copy buckets into sets, filter with a set of forbidden pairs, and sort the output. |
+| `relindex-rows` | Construct relations from row comprehensions, apply an anti-join, then flatten `group_by()` output. |
+| `relindex-mapping` | Import with `from_mapping()`, apply the same anti-join, and export with `to_mapping()`. |
+
+The handwritten baseline operates on the same valid built-in integer labels;
+it is not a general-purpose replacement for relindex's input validation. Import
+time includes domain and exclusion construction. Filtering and export have
+separate timers; their sum with import is `prepare_seconds`. Each resulting
+dictionary feeds an identical PuLP loop with binary variables and one
+at-most-one constraint per task, including constant constraints for empty tasks.
+Costs are `worker + 1`; model construction is timed separately, with no solve.
+
+All methods import PuLP and relindex before timing. Input generation is also
+excluded. Preparation RSS and post-build RSS are process high-water marks,
+including imports, input data, retained intermediate results, and outputs.
+They are not incremental allocations. The higher post-build mark includes the
+model. Equality checks, fingerprints, and actual model-count checks run after
+the timers and RSS readings. Each method and size uses three fresh processes,
+with method order rotated between repetitions. Reports retain every sample
+and the minimum, median, and maximum.
+
+The [baseline report](../benchmarks/results/mappings-before.json) uses the
+core from `4f7c645` with the same benchmark script. The
+[current report](../benchmarks/results/mappings.json) uses the optimized core.
+For each size, all methods and repetitions must agree with an independent
+comprehension and have matching output fingerprints. At 100,000 input keys,
+the model has 367,912 variables and 100,001 constraints, including 5,884 empty
+groups; actual counts and constraint nonzeros are checked in every sample.
+
+Recorded with CPython 3.14.6 and PuLP 4.0.0 on macOS 27.0 arm64. All 45
+dictionary pipelines agree within each size, including across versions.
+Median preparation times in seconds:
+
+| Input keys | Previous row API | Optimized row API | New mapping API | Handwritten dictionary |
+| ---: | ---: | ---: | ---: | ---: |
+| 1,000 | 0.0097 | 0.0045 | 0.0026 | 0.0007 |
+| 10,000 | 0.1283 | 0.0521 | 0.0317 | 0.0091 |
+| 100,000 | 1.7639 | 0.8845 | 0.6631 | 0.1230 |
+
+At 100,000 keys, the new mapping pipeline is **2.66 times faster** than the
+previous row pipeline, but the handwritten dictionary is still **5.39 times
+faster** than the mapping pipeline. The optimized row API alone is 1.99 times
+faster than before; changing from that API to the mapping methods provides
+a further 1.33-times improvement on this case. This is a combination of core
+improvements and cheaper conversions, not an inherent speed advantage of
+dicts over sets.
+
+PuLP construction takes a median 1.53 seconds for the mapping output.
+Preparation plus model construction improves from 3.33 to 2.20 seconds
+(1.51 times). Framework construction dominates more of the total after the
+preparation improvement. Medians of individual phases need not sum to the
+median total because samples vary.
+
+Median process peak memory at 100,000 keys, in MiB:
+
+| Method | Through preparation | Through model construction |
+| --- | ---: | ---: |
+| Previous row API | 272.3 | 365.0 |
+| Optimized row API | 193.0 | 347.4 |
+| New mapping API | 212.0 | 347.2 |
+| Handwritten dictionary | 162.6 | 346.4 |
+
+Direct mapping export uses per-key sets to deduplicate values from arbitrary
+source widths. It reduces time here but uses more preparation memory than the
+optimized full-row grouping. Neither conversion stores an index cache on the
+relation. Reuse exported dictionaries for repeated lookups.
+
+### Existing relation operations
+
+The same change also speeds up the original join/project/anti-join/grouping
+pipeline. The [before](../benchmarks/results/relations-before.json) and
+[after](../benchmarks/results/relations-optimized.json) reports use the same
+script, inputs, and outputs. All 72 pipelines agree within size and case,
+including across versions. At 100,000 rows per main input:
+
+| Case | Previous relindex seconds | Optimized relindex seconds | Speedup | Indexed Python seconds |
+| --- | ---: | ---: | ---: | ---: |
+| sparse | 0.9984 | 0.6621 | 1.51x | 0.1055 |
+| fanout | 3.3232 | 1.9262 | 1.73x | 0.3608 |
+
+Public input validation still checks every label and schema. Internal
+operations freeze already validated results without validating every value
+again. Column extraction functions are constructed once per operation instead
+of allocating a generator for every row. `group_by()` sorts full rows within
+each bucket instead of globally sorting the source. `to_mapping()` groups
+scalar values directly and avoids a projected relation and full-row groups.
+Set semantics, canonical output ordering, and empty-domain behavior are unchanged.
+
+The two code versions were measured in separate sequential runs, rather than
+interleaving versions. Background load was not controlled; three repetitions
+on one machine are an estimate, not a statistical performance guarantee.
+These input dictionaries use short integer labels and small, balanced buckets.
+Mixed label types and wider projections are covered by correctness tests,
+not by these timing results.
+
+### Reproduce the baseline comparison
+
+The baseline does not provide `from_mapping()` or `to_mapping()`, so it runs
+only the handwritten and row-based methods. A temporary package copy selects
+its implementation without modifying the checkout or its environment:
+
+```sh
+baseline_dir=$(mktemp -d)
+mkdir "$baseline_dir/relindex"
+git show 4f7c645:src/relindex/__init__.py > "$baseline_dir/relindex/__init__.py"
+git show 4f7c645:src/relindex/relation.py > "$baseline_dir/relindex/relation.py"
+PYTHONPATH="$baseline_dir" mise exec -- uv run --locked --group examples \
+  python -m benchmarks.mappings --methods python-dict relindex-rows \
+  --output /tmp/relindex-mappings-before.json
+PYTHONPATH="$baseline_dir" mise exec -- uv run --locked \
+  python -m benchmarks.relations --methods indexed-python relindex \
+  --output /tmp/relindex-relations-before.json
+mise run benchmark:mappings
+mise exec -- uv run --locked python -m benchmarks.relations \
+  --methods indexed-python relindex --output /tmp/relindex-relations-after.json
+```
+
+Both scripts hash the actually imported core, including when `PYTHONPATH`
+selects the baseline. The original DuckDB comparison above is retained as
+historical data; this focused before/after run does not rerun DuckDB.
